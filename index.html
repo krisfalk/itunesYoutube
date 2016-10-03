@@ -1,0 +1,109 @@
+<html>
+	<head>
+		<title>iTunes - Search</title>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+		<script src="https://apis.google.com/js/client.js?"></script>
+
+		<style type="text/css">
+    body{
+      background-color: #CFE2E8;
+    }
+		#imgArt{
+			float:right;
+		}
+    .songs-search-result:hover{
+    	border: 1px solid Orange;
+    }
+		.songs-search-result {
+			border: 1px solid #2B768F;
+			margin-bottom: 5px;
+			padding: 5px;
+      width: 600px;
+		}
+		#title {
+			border: 1px solid #2B768F;
+			margin-bottom: 5px;
+			padding: 5px;
+      width: 300px;
+		}
+		#title:hover{
+    	border: 1px solid Orange;
+    }
+		.songs-search-result  .label{
+			display: inline-block;
+			width: 150px;
+		}
+    #itunes-results {
+      width:500px;
+    }
+    #itunes-results div {
+      display:block;
+      margin-bottom:10px;
+    }
+		#result div {
+      display:block;
+      margin-bottom:10px;
+    }
+    .easyPaginateNav a {
+      color : #1196C2;
+      font-size: 20;
+      text-decoration: none;
+      padding:5px;
+    }
+    .easyPaginateNav a.current {
+      font-weight:bold;
+      text-decoration:underline;
+    }
+		#myTable {
+			width : 960px;
+		}
+		#topDisplay{
+			border: 1px solid #2B768F;
+			margin-bottom: 5px;
+			padding: 5px;
+      width: auto;
+		}
+		</style>
+
+		<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript" src="jquery.easyPaginate.js"></script>
+		<script type="text/javascript" src="app.js">
+    </script>
+
+	</head>
+
+	<body>
+		<br />
+		<br />
+		<center>
+			<div id="topDisplay">
+			<h3>Youtube and iTunes Search:</h3>
+		<input type="text" id="search-keyword" title="Enter Search Keyword" placeholder="Search" onkeydown = "if (event.keyCode == 13) document.getElementById('search-button').click()" />
+
+		<input class="btn btn-default" id="search-button" type="button" value="Perform Search" onclick="checkSearchType();" />
+	</div>
+    <br />
+		<div id="display-search">
+		</div>
+		<div id="viewTable">
+		<table id="myTable">
+			<tr>
+				<th>Youtube</th>
+				<th>iTunes</th>
+			</tr>
+			<tr>
+				<td>
+			<div id="result">
+			</div>
+		</td>
+		<td>
+			<div id="itunes-results">
+			</div>
+		</td>
+		</tr>
+	</table>
+</div>
+	</center>
+	</body>
+</html>
